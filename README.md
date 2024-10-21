@@ -2,4 +2,4 @@
 
 ### Prerequisites:
 * Start empty Postgres-database with "docker compose up".
-  (docker-compose.yml file is in the directory)
+  (docker-compose.yml file is in the root directory)
