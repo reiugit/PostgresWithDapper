@@ -1,4 +1,5 @@
 # Using Postgres with Dapper
 
 ### Prerequisites:
-* Start Postgres-database with "docker compose up".
+* Start empty Postgres-database with "docker compose up".
+  (docker-compose.yml file is in the directory)
