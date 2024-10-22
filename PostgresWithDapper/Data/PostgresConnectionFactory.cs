@@ -8,7 +8,17 @@ public class PostgresConnectionFactory(string connectionString) : IDbConnectionF
     public async Task<IDbConnection> CreateConnectionAsync()
     {
         var connection = new NpgsqlConnection(connectionString);
-        await connection.OpenAsync();
+
+        try
+        {
+            await connection.OpenAsync();
+        }
+        catch (Exception ex)
+        {
+            connection.Dispose();
+            throw new Exception("Could not open a connection to the database", ex);
+        }
+        
         return connection;
     }
 }
